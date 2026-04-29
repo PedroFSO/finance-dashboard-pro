@@ -1,0 +1,16 @@
+{
+  "name": "Finance Dashboard Pro",
+  "short_name": "Finance Pro",
+  "description": "Case de frontend, budget tracking e visibilidade de caixa.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f6fb",
+  "theme_color": "#5563ff",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

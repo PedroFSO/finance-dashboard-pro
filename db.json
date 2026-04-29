@@ -1,0 +1,421 @@
+{
+  "categories": [
+    {
+      "id": "salary",
+      "name": "Salário",
+      "color": "#1f9d72",
+      "monthlyBudget": 0
+    },
+    {
+      "id": "freelance",
+      "name": "Freelance",
+      "color": "#2b78ff",
+      "monthlyBudget": 0
+    },
+    {
+      "id": "housing",
+      "name": "Moradia",
+      "color": "#de4e57",
+      "monthlyBudget": 4200
+    },
+    {
+      "id": "transport",
+      "name": "Transporte",
+      "color": "#ff9f43",
+      "monthlyBudget": 950
+    },
+    {
+      "id": "food",
+      "name": "Alimentação",
+      "color": "#6f5ef9",
+      "monthlyBudget": 1800
+    },
+    {
+      "id": "health",
+      "name": "Saúde",
+      "color": "#00a6a6",
+      "monthlyBudget": 1200
+    },
+    {
+      "id": "education",
+      "name": "Educação",
+      "color": "#7c3aed",
+      "monthlyBudget": 1400
+    },
+    {
+      "id": "operations",
+      "name": "Operações",
+      "color": "#475569",
+      "monthlyBudget": 2200
+    },
+    {
+      "name": "Teste",
+      "color": "#5563ff",
+      "monthlyBudget": 100,
+      "id": "rdgzLWMLdX4"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "txn_001",
+      "description": "Salário mensal",
+      "amount": 11800,
+      "type": "income",
+      "category": "salary",
+      "date": "2026-01-05"
+    },
+    {
+      "id": "txn_002",
+      "description": "Projeto de discovery financeiro",
+      "amount": 4600,
+      "type": "income",
+      "category": "freelance",
+      "date": "2026-01-15"
+    },
+    {
+      "id": "txn_003",
+      "description": "Aluguel do escritorio",
+      "amount": 3100,
+      "type": "expense",
+      "category": "housing",
+      "date": "2026-01-03"
+    },
+    {
+      "id": "txn_004",
+      "description": "Internet corporativa",
+      "amount": 320,
+      "type": "expense",
+      "category": "housing",
+      "date": "2026-01-08"
+    },
+    {
+      "id": "txn_005",
+      "description": "Mercado semanal",
+      "amount": 760,
+      "type": "expense",
+      "category": "food",
+      "date": "2026-01-10"
+    },
+    {
+      "id": "txn_006",
+      "description": "Combustível e estacionamento",
+      "amount": 280,
+      "type": "expense",
+      "category": "transport",
+      "date": "2026-01-11"
+    },
+    {
+      "id": "txn_007",
+      "description": "Infraestrutura em nuvem",
+      "amount": 980,
+      "type": "expense",
+      "category": "operations",
+      "date": "2026-01-13"
+    },
+    {
+      "id": "txn_008",
+      "description": "Curso de analytics de produto",
+      "amount": 420,
+      "type": "expense",
+      "category": "education",
+      "date": "2026-01-19"
+    },
+    {
+      "id": "txn_009",
+      "description": "Sessão de fisioterapia",
+      "amount": 260,
+      "type": "expense",
+      "category": "health",
+      "date": "2026-01-21"
+    },
+    {
+      "id": "txn_010",
+      "description": "Almoco com stakeholder",
+      "amount": 210,
+      "type": "expense",
+      "category": "food",
+      "date": "2026-01-26"
+    },
+    {
+      "id": "txn_011",
+      "description": "Salário mensal",
+      "amount": 11200,
+      "type": "income",
+      "category": "salary",
+      "date": "2026-02-05"
+    },
+    {
+      "id": "txn_012",
+      "description": "Projeto de arquitetura para ERP",
+      "amount": 1800,
+      "type": "income",
+      "category": "freelance",
+      "date": "2026-02-19"
+    },
+    {
+      "id": "txn_013",
+      "description": "Aluguel do escritorio",
+      "amount": 3100,
+      "type": "expense",
+      "category": "housing",
+      "date": "2026-02-03"
+    },
+    {
+      "id": "txn_014",
+      "description": "Manutencao da sala comercial",
+      "amount": 1240,
+      "type": "expense",
+      "category": "housing",
+      "date": "2026-02-12"
+    },
+    {
+      "id": "txn_015",
+      "description": "Reposicao de estoque da copa",
+      "amount": 610,
+      "type": "expense",
+      "category": "food",
+      "date": "2026-02-09"
+    },
+    {
+      "id": "txn_016",
+      "description": "Creditos de mobilidade",
+      "amount": 330,
+      "type": "expense",
+      "category": "transport",
+      "date": "2026-02-14"
+    },
+    {
+      "id": "txn_017",
+      "description": "Stack de design e produtividade",
+      "amount": 1380,
+      "type": "expense",
+      "category": "operations",
+      "date": "2026-02-16"
+    },
+    {
+      "id": "txn_018",
+      "description": "Plano de saude empresarial",
+      "amount": 890,
+      "type": "expense",
+      "category": "health",
+      "date": "2026-02-04"
+    },
+    {
+      "id": "txn_019",
+      "description": "Workshop de performance",
+      "amount": 650,
+      "type": "expense",
+      "category": "education",
+      "date": "2026-02-22"
+    },
+    {
+      "id": "txn_020",
+      "description": "Cafe com cliente enterprise",
+      "amount": 180,
+      "type": "expense",
+      "category": "food",
+      "date": "2026-02-25"
+    },
+    {
+      "id": "txn_021",
+      "description": "Salário mensal",
+      "amount": 12500,
+      "type": "income",
+      "category": "salary",
+      "date": "2026-03-05"
+    },
+    {
+      "id": "txn_022",
+      "description": "Retainer de analytics",
+      "amount": 6200,
+      "type": "income",
+      "category": "freelance",
+      "date": "2026-03-21"
+    },
+    {
+      "id": "txn_023",
+      "description": "Aluguel do escritorio",
+      "amount": 3100,
+      "type": "expense",
+      "category": "housing",
+      "date": "2026-03-03"
+    },
+    {
+      "id": "txn_024",
+      "description": "Internet corporativa",
+      "amount": 320,
+      "type": "expense",
+      "category": "housing",
+      "date": "2026-03-07"
+    },
+    {
+      "id": "txn_025",
+      "description": "Mercado quinzenal",
+      "amount": 560,
+      "type": "expense",
+      "category": "food",
+      "date": "2026-03-08"
+    },
+    {
+      "id": "txn_026",
+      "description": "Jantar com cliente premium",
+      "amount": 360,
+      "type": "expense",
+      "category": "food",
+      "date": "2026-03-25"
+    },
+    {
+      "id": "txn_027",
+      "description": "Deslocamentos entre clientes",
+      "amount": 420,
+      "type": "expense",
+      "category": "transport",
+      "date": "2026-03-18"
+    },
+    {
+      "id": "txn_028",
+      "description": "Assinaturas SaaS",
+      "amount": 980,
+      "type": "expense",
+      "category": "operations",
+      "date": "2026-03-11"
+    },
+    {
+      "id": "txn_029",
+      "description": "Ferramentas de monitoramento",
+      "amount": 540,
+      "type": "expense",
+      "category": "operations",
+      "date": "2026-03-24"
+    },
+    {
+      "id": "txn_030",
+      "description": "Exames ocupacionais",
+      "amount": 430,
+      "type": "expense",
+      "category": "health",
+      "date": "2026-03-14"
+    },
+    {
+      "id": "txn_031",
+      "description": "Ingresso para conferencia de produto",
+      "amount": 1180,
+      "type": "expense",
+      "category": "education",
+      "date": "2026-03-20"
+    },
+    {
+      "id": "txn_032",
+      "description": "Salário mensal",
+      "amount": 11900,
+      "type": "income",
+      "category": "salary",
+      "date": "2026-04-05"
+    },
+    {
+      "id": "txn_033",
+      "description": "Projeto dashboard financeiro",
+      "amount": 2600,
+      "type": "income",
+      "category": "freelance",
+      "date": "2026-04-09"
+    },
+    {
+      "id": "txn_034",
+      "description": "Retainer de analise executiva",
+      "amount": 1700,
+      "type": "income",
+      "category": "freelance",
+      "date": "2026-04-15"
+    },
+    {
+      "id": "txn_035",
+      "description": "Aluguel do escritorio",
+      "amount": 3100,
+      "type": "expense",
+      "category": "housing",
+      "date": "2026-04-02"
+    },
+    {
+      "id": "txn_036",
+      "description": "Utilities e condominio",
+      "amount": 420,
+      "type": "expense",
+      "category": "housing",
+      "date": "2026-04-06"
+    },
+    {
+      "id": "txn_037",
+      "description": "Mercado semanal",
+      "amount": 680,
+      "type": "expense",
+      "category": "food",
+      "date": "2026-04-04"
+    },
+    {
+      "id": "txn_038",
+      "description": "Jantar de alinhamento com diretoria",
+      "amount": 540,
+      "type": "expense",
+      "category": "food",
+      "date": "2026-04-12"
+    },
+    {
+      "id": "txn_039",
+      "description": "Combustível e estacionamento",
+      "amount": 410,
+      "type": "expense",
+      "category": "transport",
+      "date": "2026-04-08"
+    },
+    {
+      "id": "txn_040",
+      "description": "Traslados para reunioes",
+      "amount": 260,
+      "type": "expense",
+      "category": "transport",
+      "date": "2026-04-16"
+    },
+    {
+      "id": "txn_041",
+      "description": "Ferramentas de design e pesquisa",
+      "amount": 1740,
+      "type": "expense",
+      "category": "operations",
+      "date": "2026-04-10"
+    },
+    {
+      "id": "txn_042",
+      "description": "Escalonamento de infraestrutura",
+      "amount": 1290,
+      "type": "expense",
+      "category": "operations",
+      "date": "2026-04-14"
+    },
+    {
+      "id": "txn_043",
+      "description": "Plano de saude empresarial",
+      "amount": 890,
+      "type": "expense",
+      "category": "health",
+      "date": "2026-04-03"
+    },
+    {
+      "id": "txn_044",
+      "description": "Treinamento de lideranca",
+      "amount": 760,
+      "type": "expense",
+      "category": "education",
+      "date": "2026-04-11"
+    },
+    {
+      "id": "txn_045",
+      "description": "Workshop interno de discovery",
+      "amount": 580,
+      "type": "expense",
+      "category": "education",
+      "date": "2026-04-16"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
