@@ -8,7 +8,7 @@ export function AppToaster() {
       autoClose={3000}
       closeOnClick
       pauseOnFocusLoss={false}
-      theme="colored"
+      theme="dark"
     />
   )
 }

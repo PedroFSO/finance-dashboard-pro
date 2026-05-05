@@ -478,9 +478,9 @@ function MonthSpotlightCard({
           <span className="dense-kicker">
             {highlight.eyebrow}
           </span>
-          <h3 className="mt-3 max-w-sm font-display text-[1.55rem] font-bold leading-tight tracking-[-0.05em] text-(--text-primary)">
+          <h2 className="mt-3 max-w-sm font-display text-[1.55rem] font-bold leading-tight tracking-[-0.05em] text-(--text-primary)">
             {highlight.title}
-          </h3>
+          </h2>
         </div>
         <span className="inline-flex size-11 items-center justify-center rounded-[18px] bg-(--surface-strong) text-(--text-secondary) shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
           {highlight.tone === 'danger' ? (

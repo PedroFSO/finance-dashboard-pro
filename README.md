@@ -22,11 +22,13 @@ The app simulates a FinOps workspace for budget visibility, expense concentratio
 - responsive dashboard and ledger flows
 - keyboard-accessible modal interactions
 - integration and unit tests with Vitest and Testing Library
-- CI pipeline for lint, tests, and build
+- browser E2E, accessibility, and visual checks with Playwright
+- CI pipeline for lint, tests, build, and E2E
 
 ## Product scope
 
 - financial dashboard with active range context
+- technical case route documenting architecture, tradeoffs, and roadmap
 - revenue, expense, balance, and budget metrics
 - comparative insights against the previous equivalent period
 - transaction ledger with filters, sorting, pagination, and saved presets
@@ -121,6 +123,7 @@ The app runs at `http://localhost:5173`.
 - `npm run test` starts Vitest in watch mode
 - `npm run test:run` runs the automated suite with coverage
 - `npm run test:e2e` runs the Playwright demo flow suite
+- `npm run analyze` builds the app and writes `dist/bundle-report.html`
 - `npm run build` runs TypeScript compilation and production bundling
 - `npm run preview` previews the production build
 
@@ -129,13 +132,27 @@ The app runs at `http://localhost:5173`.
 - `lint` passing
 - `build` passing
 - `test:run` passing with `11/11` tests
-- `test:e2e` passing with `3/3` browser flows
+- `test:e2e` passing with `5/5` browser flows
+- automated accessibility checks with axe on critical routes
+- desktop and mobile visual regression snapshots
 - CI workflow for `lint`, `test:run`, and `build`
 - CI installs Chromium and runs Playwright against the Vite dev server
 - runtime validation with Zod
 - Vercel static deployment configuration
 - demo data reset flow for portfolio review
 - modal keyboard support and baseline accessible labels
+- bundle analysis available through `npm run analyze`
+
+## Quality metrics
+
+| Signal | Current baseline |
+| ------ | ---------------- |
+| Unit/integration tests | 11 passing |
+| E2E flows | 5 passing |
+| Coverage | 69.58% lines |
+| CI gates | lint, unit tests, build, E2E |
+| Accessibility | axe checks on dashboard and case flows |
+| Visual regression | desktop and mobile Playwright snapshots |
 
 ## Portfolio highlights
 
@@ -173,8 +190,7 @@ The app runs at `http://localhost:5173`.
 - server-driven search and pagination
 - recurring transactions and audit trail
 - account, workspace, and cost-center segmentation
-- visual regression and end-to-end testing for routed flows
-- bundle optimization focused on charting and PDF export
+- bundle optimization focused on charting and PDF export after reviewing `bundle-report.html`
 
 ## Hiring-manager summary
 

@@ -54,6 +54,7 @@ export function TransactionsPage({
   const [sortField, setSortField] = useState<TransactionsSortField>('date')
   const [sortDirection, setSortDirection] = useState<TransactionsSortDirection>('desc')
   const [page, setPage] = useState(1)
+  const [isExportingCsv, setIsExportingCsv] = useState(false)
   const [isExportingPdf, setIsExportingPdf] = useState(false)
 
   const { presets, removePreset, savePreset } = useSavedFilterPresets()
@@ -151,11 +152,34 @@ export function TransactionsPage({
     savePreset(preset)
   }
 
+  async function handleExportCsv() {
+    if (!sortedTransactions.length) {
+      toast.info('Nao ha transacoes para exportar.')
+      return
+    }
+
+    try {
+      setIsExportingCsv(true)
+      exportTransactionsToCsv(sortedTransactions, categories)
+      toast.success('CSV exportado com sucesso.')
+    } catch {
+      toast.error('Nao foi possivel exportar o CSV.')
+    } finally {
+      setIsExportingCsv(false)
+    }
+  }
+
   async function handleExportPdf() {
+    if (!sortedTransactions.length) {
+      toast.info('Nao ha transacoes para exportar.')
+      return
+    }
+
     try {
       setIsExportingPdf(true)
       const module = await import('../utils/exportPdf')
       module.exportTransactionsToPdf(sortedTransactions, categories)
+      toast.success('PDF exportado com sucesso.')
     } catch {
       toast.error('Não foi possível exportar o PDF.')
     } finally {
@@ -235,15 +259,16 @@ export function TransactionsPage({
             </button>
             <button
               className="pill-button"
-              onClick={() => exportTransactionsToCsv(sortedTransactions, categories)}
+              disabled={isExportingCsv || !sortedTransactions.length}
+              onClick={() => void handleExportCsv()}
               type="button"
             >
               <Download className="size-3.5" />
-              Exportar CSV
+              {isExportingCsv ? 'Gerando CSV' : 'Exportar CSV'}
             </button>
             <button
               className="pill-button"
-              disabled={isExportingPdf}
+              disabled={isExportingPdf || !sortedTransactions.length}
               onClick={() => void handleExportPdf()}
               type="button"
             >

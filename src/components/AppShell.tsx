@@ -15,6 +15,7 @@ import {
   SunMedium,
   WalletCards,
 } from './icons/navigation'
+import { Layers3 } from './icons/page'
 import { useTheme } from '../hooks/useTheme'
 
 interface AppShellProps extends PropsWithChildren {
@@ -30,6 +31,7 @@ const navigationItems = [
   { label: 'Dashboard', icon: BarChart3, to: '/', end: true },
   { label: 'Transações', icon: WalletCards, to: '/transactions' },
   { label: 'Categorias', icon: CreditCard, to: '/categories' },
+  { label: 'Case', icon: Layers3, to: '/case' },
 ]
 
 export function AppShell({

@@ -44,6 +44,12 @@ const CategoriesPage = lazy(() =>
   })),
 )
 
+const CasePage = lazy(() =>
+  import('./pages/CasePage').then((module) => ({
+    default: module.CasePage,
+  })),
+)
+
 function App() {
   return (
     <ErrorBoundary>
@@ -142,6 +148,7 @@ function AppContent() {
               path="/transactions"
             />
             <Route element={<CategoriesPage />} path="/categories" />
+            <Route element={<CasePage />} path="/case" />
           </Routes>
         </Suspense>
       </AppShell>
