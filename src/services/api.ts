@@ -1,7 +1,16 @@
 import axios from 'axios'
 
+const configuredApiBaseUrl = import.meta.env.VITE_API_BASE_URL
+const isLocalhostApi =
+  configuredApiBaseUrl?.includes('localhost') ||
+  configuredApiBaseUrl?.includes('127.0.0.1')
+
+export const hasConfiguredApiBaseUrl = Boolean(
+  configuredApiBaseUrl && !(import.meta.env.PROD && isLocalhostApi),
+)
+
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:3001',
+  baseURL: hasConfiguredApiBaseUrl ? configuredApiBaseUrl : undefined,
   headers: {
     'Content-Type': 'application/json',
   },
