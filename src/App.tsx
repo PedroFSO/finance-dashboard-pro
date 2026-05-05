@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom'
 import { AppShell } from './components/AppShell'
 import { DashboardSkeleton } from './components/DashboardSkeleton'
+import { ErrorBoundary } from './components/ErrorBoundary'
 import { useCategories } from './hooks/useCategories'
 import { hasConfiguredApiBaseUrl } from './services/api'
 import { resetMockFinanceData } from './services/mockFinanceApi'
@@ -45,9 +46,11 @@ const CategoriesPage = lazy(() =>
 
 function App() {
   return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
+    <ErrorBoundary>
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
+    </ErrorBoundary>
   )
 }
 

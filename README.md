@@ -48,6 +48,7 @@ The app simulates a FinOps workspace for budget visibility, expense concentratio
 - React Toastify
 - json-server
 - Vitest
+- Playwright
 - Testing Library
 
 ## Architecture
@@ -119,6 +120,7 @@ The app runs at `http://localhost:5173`.
 - `npm run lint` runs ESLint
 - `npm run test` starts Vitest in watch mode
 - `npm run test:run` runs the automated suite with coverage
+- `npm run test:e2e` runs the Playwright demo flow suite
 - `npm run build` runs TypeScript compilation and production bundling
 - `npm run preview` previews the production build
 
@@ -127,7 +129,9 @@ The app runs at `http://localhost:5173`.
 - `lint` passing
 - `build` passing
 - `test:run` passing with `11/11` tests
+- `test:e2e` passing with `3/3` browser flows
 - CI workflow for `lint`, `test:run`, and `build`
+- CI installs Chromium and runs Playwright against the Vite dev server
 - runtime validation with Zod
 - Vercel static deployment configuration
 - demo data reset flow for portfolio review

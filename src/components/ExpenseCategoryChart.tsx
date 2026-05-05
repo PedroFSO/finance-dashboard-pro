@@ -36,7 +36,7 @@ export function ExpenseCategoryChart({
             {topCategory?.name ?? 'Sem dados'}
           </strong>
         </div>
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer height="100%" minHeight={1} minWidth={1} width="100%">
           <PieChart>
             <Pie
               cx="50%"

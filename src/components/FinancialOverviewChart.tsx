@@ -58,7 +58,7 @@ export function FinancialOverviewChart({
       </div>
 
       <div className="h-84 rounded-3xl border border-(--border) bg-(--surface-muted) p-3 sm:h-88 sm:p-3.5 xl:h-92">
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer height="100%" minHeight={1} minWidth={1} width="100%">
           <AreaChart
             data={data}
             margin={{ top: 10, right: 10, left: -24, bottom: 0 }}
