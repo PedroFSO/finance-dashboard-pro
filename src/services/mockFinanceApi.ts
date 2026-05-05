@@ -6,7 +6,7 @@ import type {
   TransactionPayload,
 } from '../types/finance'
 
-const STORAGE_KEY = 'finance-dashboard-pro:mock-api'
+const STORAGE_KEY = 'finance-dashboard-pro:mock-api:v2'
 
 interface FinanceDatabase {
   categories: Category[]

@@ -415,6 +415,110 @@
       "type": "expense",
       "category": "education",
       "date": "2026-04-16"
+    },
+    {
+      "id": "txn_046",
+      "description": "Salario mensal",
+      "amount": 12400,
+      "type": "income",
+      "category": "salary",
+      "date": "2026-05-05"
+    },
+    {
+      "id": "txn_047",
+      "description": "Projeto de planejamento financeiro",
+      "amount": 3200,
+      "type": "income",
+      "category": "freelance",
+      "date": "2026-05-04"
+    },
+    {
+      "id": "txn_048",
+      "description": "Aluguel do escritorio",
+      "amount": 3100,
+      "type": "expense",
+      "category": "housing",
+      "date": "2026-05-02"
+    },
+    {
+      "id": "txn_049",
+      "description": "Condominio e utilidades",
+      "amount": 460,
+      "type": "expense",
+      "category": "housing",
+      "date": "2026-05-03"
+    },
+    {
+      "id": "txn_050",
+      "description": "Mercado semanal",
+      "amount": 720,
+      "type": "expense",
+      "category": "food",
+      "date": "2026-05-04"
+    },
+    {
+      "id": "txn_051",
+      "description": "Almoco com cliente",
+      "amount": 240,
+      "type": "expense",
+      "category": "food",
+      "date": "2026-05-05"
+    },
+    {
+      "id": "txn_052",
+      "description": "Combustivel e estacionamento",
+      "amount": 390,
+      "type": "expense",
+      "category": "transport",
+      "date": "2026-05-03"
+    },
+    {
+      "id": "txn_053",
+      "description": "Assinaturas SaaS",
+      "amount": 1120,
+      "type": "expense",
+      "category": "operations",
+      "date": "2026-05-02"
+    },
+    {
+      "id": "txn_054",
+      "description": "Licencas de produtividade",
+      "amount": 780,
+      "type": "expense",
+      "category": "operations",
+      "date": "2026-05-04"
+    },
+    {
+      "id": "txn_055",
+      "description": "Plano de saude empresarial",
+      "amount": 890,
+      "type": "expense",
+      "category": "health",
+      "date": "2026-05-03"
+    },
+    {
+      "id": "txn_056",
+      "description": "Treinamento de analytics",
+      "amount": 640,
+      "type": "expense",
+      "category": "education",
+      "date": "2026-05-05"
+    },
+    {
+      "id": "txn_057",
+      "description": "Infraestrutura em nuvem",
+      "amount": 1350,
+      "type": "expense",
+      "category": "operations",
+      "date": "2026-05-05"
+    },
+    {
+      "id": "txn_058",
+      "description": "Traslados para reunioes",
+      "amount": 280,
+      "type": "expense",
+      "category": "transport",
+      "date": "2026-05-04"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
