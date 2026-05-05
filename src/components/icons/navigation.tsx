@@ -72,6 +72,15 @@ export function Search(props: IconProps) {
   )
 }
 
+export function RotateCcw(props: IconProps) {
+  return (
+    <IconBase {...props}>
+      <path d="M3 12a9 9 0 1 0 3-6.7" />
+      <path d="M3 4v6h6" />
+    </IconBase>
+  )
+}
+
 export function SunMedium(props: IconProps) {
   return (
     <IconBase {...props}>

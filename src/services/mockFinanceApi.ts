@@ -18,6 +18,10 @@ const initialDatabase: FinanceDatabase = {
   transactions: database.transactions as Transaction[],
 }
 
+export function resetMockFinanceData() {
+  writeDatabase(cloneDatabase(initialDatabase))
+}
+
 function cloneDatabase(data: FinanceDatabase): FinanceDatabase {
   return structuredClone(data)
 }

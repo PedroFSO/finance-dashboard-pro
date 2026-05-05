@@ -17,6 +17,7 @@ The app simulates a FinOps workspace for budget visibility, expense concentratio
 
 - route-oriented React architecture with isolated business rules
 - runtime-safe API layer with Zod
+- Vercel-ready demo mode with browser-persisted mock data
 - active-period and previous-period comparison logic
 - responsive dashboard and ledger flows
 - keyboard-accessible modal interactions
@@ -65,9 +66,21 @@ src/
 
 - `TanStack Query` owns async server-state lifecycle and cache invalidation.
 - `Zod` validates payloads so the UI does not trust the mock API blindly.
+- The Vercel build can run without a backend by loading the seed from `db.json` and persisting demo changes in `localStorage`.
 - The dashboard now respects the active range and compares it against the previous equivalent period instead of mixing local and global metrics.
 - The ledger exposes filters in the URL to keep the state shareable and debuggable.
 - The test suite targets both pure financial rules and user interactions on critical components.
+
+## Demo mode
+
+The project is ready to run on Vercel before a real backend exists. When `VITE_API_BASE_URL` is not configured, the app uses an in-browser mock API:
+
+- initial data comes from `db.json`
+- creates, edits, deletes, and category changes persist in `localStorage`
+- the sidebar exposes a `Restaurar` action to reset the local demo data
+- production ignores a localhost API URL so a stale `VITE_API_BASE_URL=http://localhost:3001` does not break Vercel
+
+When a backend is added later, set `VITE_API_BASE_URL` to the deployed API URL and the existing service layer will use Axios instead of the browser mock.
 
 ## Running locally
 
@@ -113,9 +126,11 @@ The app runs at `http://localhost:5173`.
 
 - `lint` passing
 - `build` passing
-- `test:run` passing with `9/9` tests
+- `test:run` passing with `11/11` tests
 - CI workflow for `lint`, `test:run`, and `build`
 - runtime validation with Zod
+- Vercel static deployment configuration
+- demo data reset flow for portfolio review
 - modal keyboard support and baseline accessible labels
 
 ## Portfolio highlights

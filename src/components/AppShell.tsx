@@ -10,6 +10,7 @@ import {
   Menu,
   Moon,
   Plus,
+  RotateCcw,
   Search,
   SunMedium,
   WalletCards,
@@ -17,7 +18,9 @@ import {
 import { useTheme } from '../hooks/useTheme'
 
 interface AppShellProps extends PropsWithChildren {
+  isDemoMode?: boolean
   onPrimaryAction: () => void
+  onResetDemoData?: () => void
   onSearchChange: (value: string) => void
   primaryActionLabel?: string
   searchValue: string
@@ -31,7 +34,9 @@ const navigationItems = [
 
 export function AppShell({
   children,
+  isDemoMode = false,
   onPrimaryAction,
+  onResetDemoData,
   onSearchChange,
   primaryActionLabel = 'Nova transação',
   searchValue,
@@ -73,7 +78,9 @@ export function AppShell({
         >
           <SidebarContent
             collapsed={isSidebarCollapsed}
+            isDemoMode={isDemoMode}
             onCollapse={() => setIsSidebarCollapsed((current) => !current)}
+            onResetDemoData={onResetDemoData}
           />
         </motion.aside>
 
@@ -88,7 +95,9 @@ export function AppShell({
             >
               <SidebarContent
                 collapsed={false}
+                isDemoMode={isDemoMode}
                 onCollapse={() => setIsMobileSidebarOpen(false)}
+                onResetDemoData={onResetDemoData}
               />
             </motion.aside>
           ) : null}
@@ -168,10 +177,17 @@ export function AppShell({
 
 interface SidebarContentProps {
   collapsed: boolean
+  isDemoMode: boolean
   onCollapse: () => void
+  onResetDemoData?: () => void
 }
 
-function SidebarContent({ collapsed, onCollapse }: SidebarContentProps) {
+function SidebarContent({
+  collapsed,
+  isDemoMode,
+  onCollapse,
+  onResetDemoData,
+}: SidebarContentProps) {
   return (
     <>
       <div className="w-full">
@@ -285,12 +301,33 @@ function SidebarContent({ collapsed, onCollapse }: SidebarContentProps) {
             initial={{ opacity: 0 }}
             transition={{ duration: 0.18, ease: 'easeOut' }}
           >
-            <p className="dense-kicker">
-              Foco
-            </p>
-            <p className="mt-2.5 text-sm leading-6 font-medium tracking-[-0.02em] text-(--text-primary)">
-              Mantenha o ritmo de gastos sob controle esta semana.
-            </p>
+            {isDemoMode ? (
+              <>
+                <p className="dense-kicker">
+                  Demo local
+                </p>
+                <p className="mt-2.5 text-sm leading-6 font-medium tracking-[-0.02em] text-(--text-primary)">
+                  Dados salvos neste navegador.
+                </p>
+                <button
+                  className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-(--border) bg-(--surface-strong) px-3 py-2.5 text-xs font-semibold uppercase tracking-[0.16em] text-(--text-secondary) transition hover:text-(--text-primary)"
+                  onClick={onResetDemoData}
+                  type="button"
+                >
+                  <RotateCcw className="size-3.5" />
+                  Restaurar
+                </button>
+              </>
+            ) : (
+              <>
+                <p className="dense-kicker">
+                  Foco
+                </p>
+                <p className="mt-2.5 text-sm leading-6 font-medium tracking-[-0.02em] text-(--text-primary)">
+                  Mantenha o ritmo de gastos sob controle esta semana.
+                </p>
+              </>
+            )}
           </motion.div>
         ) : (
           <motion.div

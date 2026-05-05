@@ -1,4 +1,5 @@
 import { lazy, Suspense, useState } from 'react'
+import { useQueryClient } from '@tanstack/react-query'
 import {
   BrowserRouter,
   Route,
@@ -9,11 +10,14 @@ import {
 import { AppShell } from './components/AppShell'
 import { DashboardSkeleton } from './components/DashboardSkeleton'
 import { useCategories } from './hooks/useCategories'
+import { hasConfiguredApiBaseUrl } from './services/api'
+import { resetMockFinanceData } from './services/mockFinanceApi'
 import {
   useCreateTransaction,
   useUpdateTransaction,
 } from './hooks/useTransactions'
 import type { Transaction, TransactionPayload } from './types/finance'
+import { notifySuccess } from './utils/notify'
 
 const TransactionFormModal = lazy(() =>
   import('./components/TransactionFormModal').then((module) => ({
@@ -55,6 +59,7 @@ function AppContent() {
   )
   const location = useLocation()
   const navigate = useNavigate()
+  const queryClient = useQueryClient()
 
   const categoriesQuery = useCategories({ enabled: isModalOpen })
   const createMutation = useCreateTransaction()
@@ -95,10 +100,21 @@ function AppContent() {
     }
   }
 
+  async function handleResetDemoData() {
+    resetMockFinanceData()
+    await Promise.all([
+      queryClient.invalidateQueries({ queryKey: ['transactions'] }),
+      queryClient.invalidateQueries({ queryKey: ['categories'] }),
+    ])
+    void notifySuccess('Dados demo restaurados.')
+  }
+
   return (
     <>
       <AppShell
+        isDemoMode={!hasConfiguredApiBaseUrl}
         onPrimaryAction={openCreateTransactionModal}
+        onResetDemoData={handleResetDemoData}
         onSearchChange={handleSearchChange}
         searchValue={searchTerm}
       >
