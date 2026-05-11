@@ -8,12 +8,12 @@ const decisions = [
   {
     title: 'Modo demo sem backend',
     description:
-      'O build da Vercel usa db.json como seed e persiste alteracoes em localStorage, preservando criacao, edicao, exclusao e reset dos dados.',
+      'O build da Vercel usa db.json como seed e persiste alterações em localStorage, preservando criação, edição, exclusão e reset dos dados.',
   },
   {
     title: 'Estado servidor isolado',
     description:
-      'TanStack Query centraliza cache, invalidacao e sincronizacao entre dashboard, ledger e categorias.',
+      'TanStack Query centraliza cache, invalidação e sincronização entre dashboard, ledger e categorias.',
   },
   {
     title: 'Contrato validado em runtime',
@@ -23,15 +23,15 @@ const decisions = [
   {
     title: 'Qualidade automatizada',
     description:
-      'CI cobre lint, testes unitarios, build e fluxos E2E com Playwright no modo demo.',
+      'CI cobre lint, testes unitários, build e fluxos E2E com Playwright no modo demo.',
   },
 ]
 
 const roadmap = [
-  'Backend autenticado com workspace, usuarios e permissoes',
-  'Paginacao e busca server-driven para o ledger',
-  'Auditoria de alteracoes e transacoes recorrentes',
-  'Monitoramento de erros e metricas de uso em producao',
+  'Backend autenticado com workspace, usuários e permissões',
+  'Paginação e busca server-driven para o ledger',
+  'Auditoria de alterações e transações recorrentes',
+  'Monitoramento de erros e métricas de uso em produção',
 ]
 
 export function CasePage() {
@@ -46,8 +46,8 @@ export function CasePage() {
           </div>
         }
         badge="Portfolio case"
-        description="Resumo das escolhas de produto e engenharia por tras do Finance Dashboard Pro."
-        title="Case tecnico"
+        description="Resumo das escolhas de produto e engenharia por trás do Finance Dashboard Pro."
+        title="Case técnico"
       />
 
       <section className="grid gap-3 xl:grid-cols-12">
@@ -58,14 +58,14 @@ export function CasePage() {
           >
             <div className="space-y-4 text-sm leading-7 text-(--text-secondary)">
               <p>
-                O objetivo e demonstrar uma experiencia de dashboard financeiro
-                que vai alem de cards esteticos: filtros compartilhaveis,
-                comparativos por periodo, categorias editaveis, exportacao e
-                estados de demo previsiveis.
+                O objetivo é demonstrar uma experiência de dashboard financeiro
+                que vai além de cards estéticos: filtros compartilháveis,
+                comparativos por período, categorias editáveis, exportação e
+                estados de demo previsíveis.
               </p>
               <p>
-                Como o backend ainda nao faz parte do escopo, a aplicacao
-                separa a camada de servicos para trocar o mock local por uma API
+                Como o backend ainda não faz parte do escopo, a aplicação
+                separa a camada de serviços para trocar o mock local por uma API
                 real sem reescrever as telas.
               </p>
             </div>
@@ -78,17 +78,17 @@ export function CasePage() {
             title="Tradeoffs"
           >
             <ul className="space-y-3 text-sm leading-6 text-(--text-secondary)">
-              <li>Dados demo ficam no navegador e podem ser restaurados pelo usuario.</li>
-              <li>Exportacoes rodam no client para manter o deploy estatico.</li>
-              <li>Sem autenticacao, permissoes ou auditoria ate o backend entrar.</li>
+              <li>Dados demo ficam no navegador e podem ser restaurados pelo usuário.</li>
+              <li>Exportações rodam no client para manter o deploy estático.</li>
+              <li>Sem autenticação, permissões ou auditoria até o backend entrar.</li>
             </ul>
           </SectionCard>
         </div>
       </section>
 
       <SectionCard
-        subtitle="Decisoes que deixam o projeto pronto para evoluir para backend real."
-        title="Decisoes tecnicas"
+        subtitle="Decisões que deixam o projeto pronto para evoluir para backend real."
+        title="Decisões técnicas"
       >
         <div className="grid gap-3 md:grid-cols-2">
           {decisions.map((decision, index) => (
@@ -122,7 +122,7 @@ export function CasePage() {
       </SectionCard>
 
       <SectionCard
-        subtitle="Proximos passos quando o backend entrar no escopo."
+        subtitle="Próximos passos quando o backend entrar no escopo."
         title="Roadmap"
       >
         <div className="grid gap-3 md:grid-cols-2">
